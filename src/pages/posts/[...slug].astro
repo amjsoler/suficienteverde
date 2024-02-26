@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import PostLayout from "../../layouts/PostLayout.astro";
 // 1. Genera una nueva ruta para cada entrada de colección
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts');
@@ -11,5 +12,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<h1>{entry.data.title}</h1>
-<Content />
+
+<PostLayout title="Titulo random de un postecito">
+  <Content />
+</PostLayout>

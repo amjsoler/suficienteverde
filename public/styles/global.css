@@ -41,9 +41,11 @@
 }
 
 html, body {
-    font-family: 'clear-sans';
+    font-family: 'clear-sans', serif;
+    text-wrap: pretty;
 }
-h1, h2 {
-    font-family: 'nature-spirit';
+h1, h2, h3{
+    font-family: 'nature-spirit', serif;
     letter-spacing: 1px;
+
 }
