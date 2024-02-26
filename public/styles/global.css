@@ -26,9 +26,6 @@
     font-style: italic;
 }
 
-
-
-
 @font-face {
     font-family: 'nature-spirit';
     src: url('../fonts/nature-spirit/NatureSpiritRegular.otf');
@@ -43,7 +40,10 @@
     font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'nature-spirit-rough';
-
+html, body {
+    font-family: 'clear-sans';
+}
+h1, h2 {
+    font-family: 'nature-spirit';
+    letter-spacing: 1px;
 }

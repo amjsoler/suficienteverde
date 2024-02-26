@@ -5,11 +5,20 @@
 ---
 
 <PageLayout title={title}>
-    <section>
-        <header class="w-full h-28 space-y-2">
-            <img src="/public/logo.jpg" alt="logo de la web" class="h-full aspect-square mx-auto" />
-            <h1 class="text-9xl text-center text-primary">{title}</h1>
-            <h2 class="text-2xl text-center text-secondary">Tu blog de tal y cual</h2>
-        </header>
-    </section>
+    <div class="py-8 px-4">
+        <section class="space-y-8">
+            <header class="w-full space-y-2">
+                <img src="/public/logo.jpg" alt="logo de la web" class="h-28 aspect-square font-bold mx-auto" />
+                <h1 class="text-3xl text-center text-primary">{title}</h1>
+                <h2 class="text-2xl text-center text-secondary text-pretty">Autosuficiencia y sostenibilidad en un mismo punto</h2>
+            </header>
+    
+            <main class="flex justify-center">
+                <input type="text" class="h-8 w-full max-w-xs rounded-full border-2 px-2" placeholder="¿Sobre qué sientes curiosidad hoy?" />
+
+                <!-- Últimos 5 posts -->
+                <!-- Botón para ir a ver todos los posts (Leer más) -->
+            </main>
+        </section>
+    </div>
 </PageLayout>
