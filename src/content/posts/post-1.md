@@ -7,6 +7,7 @@ image:
     url: '/images/posts/post1/preview.jpg'
     alt: "La imagen de cabecera del post"
 tags: ["autosuficiencia", "sostenibilidad"]
+slug: "autosuficiencia-y-sostenibilidad-dos-pilares-para-un-futuro-mas-verde"
 ---
 
 ¡Hola! Estoy encantado de tenerte por aquí. Me gustaría hablar contigo sobre dos conceptos que me apasionan y que considero fundamentales en nuestro camino hacia un mundo más verde: la **autosuficiencia** y la **sostenibilidad**. 
