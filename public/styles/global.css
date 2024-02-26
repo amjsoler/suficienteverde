@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'clear-sans';
+    src: url('../fonts/clear-sans/ClearSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'clear-sans';
+    src: url('../fonts/clear-sans/ClearSans-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'clear-sans';
+    src: url('../fonts/clear-sans/ClearSans-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'clear-sans';
+    src: url('../fonts/clear-sans/ClearSans-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'nature-spirit';
+    src: url('../fonts/nature-spirit/NatureSpiritRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nature-spirit-rough';
+    src: url('../fonts/nature-spirit/NatureSpiritRough.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'nature-spirit-rough';
+
+}
