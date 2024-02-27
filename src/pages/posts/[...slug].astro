@@ -12,6 +12,6 @@ export async function getStaticPaths() {
 const { entry } = await Astro.props;
 const { Content } = await entry.render();
 ---
-<PostLayout title={entry.data.title} autor={entry.data.author} pubDate={entry.data.pubDate}>
+<PostLayout title={entry.data.title} autor={entry.data.author} pubDate={entry.data.pubDate} readTime={entry.data.readTime}>
   <Content />
 </PostLayout>

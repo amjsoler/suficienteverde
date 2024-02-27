@@ -2,7 +2,8 @@
 title: "Autosuficiencia y sostenibilidad: Dos pilares para un futuro más verde"
 pubDate: 2024-02-26
 description: "Post que trata acerca de la autosuficiencia y la sostenibilidad. Se definien ambos conceptos, se diferencian y se explora la relación entre ellos."
-author: "Jorge Amat"
+author: "Jorge"
+readTime: 3
 image:
     url: '/images/posts/post1/preview.jpg'
     alt: "La imagen de cabecera del post"
