@@ -1,7 +1,12 @@
 ---
-    import PageLayout from '../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import PostHead from '../components/posts/PostHead.astro';
 
-    const title = import.meta.env.VITE_APP_TITLE;
+const title = import.meta.env.VITE_APP_TITLE;
+    
+const allPosts = await getCollection('posts');
+const latestPosts = allPosts.slice(0, 5);
 ---
 
 <PageLayout title={title}>
@@ -13,11 +18,32 @@
                 <h2 class="text-2xl text-center text-secondary text-pretty">Autosuficiencia y sostenibilidad en un mismo punto</h2>
             </header>
     
-            <main class="flex justify-center">
+            <main class="flex flex-col items-center space-y-6">
                 <input type="text" class="h-8 w-full max-w-xs rounded-full border-2 px-2" placeholder="¿Sobre qué sientes curiosidad hoy?" />
 
-                <!-- Últimos 5 posts -->
-                <!-- Botón para ir a ver todos los posts (Leer más) -->
+                <!-- Últimos 3 posts -->
+                <div>
+                    <ul class="space-y-6">
+                        {latestPosts.map((post) => (
+                            <li class="flex flex-col gap-1">
+                                <a href={'/posts/'+post.slug} class="flex flex-col gap-1">
+                                    <div class="flex flex-row gap-3 items-center">
+                                        <div class="max-w-32">
+                                            <img src={post.data.image.url} alt={post.data.image.alt} class="bg-cover bg-center" />
+                                        </div>
+                                        <div class="flex-grow">
+                                            <h3 class="text-lg sm:text-xl md:text-2xl text-primary">{post.data.title}</h3>
+                                        </div>    
+                                    </div>
+
+                                    <p class="flex justify-end">
+                                        <PostHead class="justify-end" autor={post.data.author} pubDate={post.data.pubDate} readTime={post.data.readTime} />    
+                                    </p>
+                                    <p class="w-1/2 mx-auto border-b-2 mt-2"/>
+                                </a>
+                            </li>
+                        ))}
+                </div>
             </main>
         </section>
     </div>

@@ -39,7 +39,7 @@ slug: "por-que-adoptar-un-estilo-de-vida-mas-autosuficiente"
 
 Por ejemplo, puede ser complicado tener un huerto muy productivo en un balcón o en una casa sin un jardín adecuado. Esto puede requerir ser creativo y buscar soluciones alternativas para maximizar tu autosuficiencia dentro de tus limitaciones de espacio y vivienda.
 
-### Conclusión
+---
 
 Adoptar un estilo de vida más autosuficiente puede ofrecerte una serie de beneficios, desde *un sentido de autorealización y libertad hasta un ahorro económico a largo plazo*. 
 
