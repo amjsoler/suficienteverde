@@ -1,8 +1,9 @@
 ---
 import PageLayout from "./PageLayout.astro";
 import PostHead from "../components/posts/PostHead.astro";
+import TagLinks from "../components/posts/TagLinks.astro";
 
-const {title, autor, pubDate, readTime} = Astro.props;
+const {title, autor, pubDate, readTime, tags} = Astro.props;
 ---
 
 <PageLayout title={title} >
@@ -16,7 +17,8 @@ const {title, autor, pubDate, readTime} = Astro.props;
         <main>
             <div class="py-4 px-8 space-y-6 [&>h3]:text-2xl  [&>h4]:text-2xl  [&>h5]:text-2xl [&>h3]:text-primary  [&>h4]:text-primary  [&>h5]:text-primary">
                 <PostHead autor={autor} pubDate={pubDate} readTime={readTime} />
-                    <p class="w-48 border-b-2 border-gray-300 mx-auto"></p>
+                <TagLinks tags={tags} />
+                <p class="w-48 border-b-2 border-gray-300 mx-auto"></p>
                 <slot />
             </div>
         </main>
