@@ -5,7 +5,7 @@ description: "Post que da ideas sencillas para poder introducirse en el mundo de
 author: "Jorge"
 readTime: 8
 image:
-    url: '/images/posts/post3/preview.jpg'
+    url: '/images/posts/post3/preview.webp'
     alt: "La imagen de cabecera del post"
 tags: ["autosuficiencia", "sostenibilidad"]
 slug: "como-empezar-a-vivir-de-manera-más-autosuficiente-y-sostenible-en-casa"

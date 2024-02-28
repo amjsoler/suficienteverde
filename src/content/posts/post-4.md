@@ -5,7 +5,7 @@ description: "Ideas y acciones sencillas para reducir nuestra huella de carbono"
 author: "Jorge"
 readTime: 5
 image:
-    url: '/images/posts/post4/preview.jpg'
+    url: '/images/posts/post4/preview.webp'
     alt: "La imagen de cabecera del post"
 tags: ["sostenibilidad"]
 slug: "10-pasos-simples-para-reducir-tu-huella-de-carbono"

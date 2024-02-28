@@ -3,24 +3,49 @@ import PageLayout from "./PageLayout.astro";
 import PostHead from "../components/posts/PostHead.astro";
 import TagLinks from "../components/posts/TagLinks.astro";
 
-const {title, autor, pubDate, readTime, tags} = Astro.props;
+const {title, autor, pubDate, readTime, tags, preview} = Astro.props;
+const urlPreview = `url(${preview})`;
 ---
 
 <PageLayout title={title} >
     <article>
-        <header class="relative w-full h-52 bg-no-repeat bg-center bg-cover flex flex-row items-end" style="background-image: url('/images/posts/post1/preview.jpg')">
+        <header class="relative w-full h-52 bg-no-repeat bg-center bg-cover flex flex-row items-end">
             <div class="w-full h-full bg-gradient-to-t from-gray-900 to-50% absolute"></div>
             <div class="px-6 py-4">
                 <h2 class="text-gray-100 text-4xl drop-shadow-lg">{title}</h2>
             </div>
         </header>
         <main>
-            <div class="py-4 px-8 space-y-6 [&>h3]:text-2xl  [&>h4]:text-2xl  [&>h5]:text-2xl [&>h3]:text-primary  [&>h4]:text-primary  [&>h5]:text-primary">
+            <div class="py-4 px-8 space-y-4">
                 <PostHead autor={autor} pubDate={pubDate} readTime={readTime} />
                 <TagLinks tags={tags} />
                 <p class="w-48 border-b-2 border-gray-300 mx-auto"></p>
-                <slot />
+                <div class="post-content space-y-4
+                            [&>h3]:text-2xl  [&>h4]:text-2xl  [&>h5]:text-2xl
+                            [&>h3]:!mt-12  [&>h4]:!mt-12  [&>h5]:!mt-12
+                            [&>h3]:text-primary [&>h4]:text-primary  [&>h5]:text-primary
+                            [&>ul]:space-y-2
+                            [&>ol]:space-y-2
+                            [&>ol>li]:space-y-2
+                            [&>ul>li]:space-y-2"
+                >
+                    <slot />
+                </div>
             </div>
         </main>
     </article>
 </PageLayout>
+
+<style is:global define:vars={{ urlPreview }}>
+    header {
+        background-image: var(--urlPreview);
+    }
+
+    .post-content ol {
+        list-style: decimal;
+    }
+
+    .post-content ul {
+        list-style: disc;
+    }
+</style>

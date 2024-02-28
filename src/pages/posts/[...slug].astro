@@ -13,6 +13,6 @@ const { entry } = await Astro.props;
 const { Content } = await entry.render();
 ---
 <PostLayout title={entry.data.title} autor={entry.data.author} pubDate={entry.data.pubDate} readTime={entry.data.readTime}
-            tags={entry.data.tags}>
+            tags={entry.data.tags} preview={entry.data.image.url}>
   <Content />
 </PostLayout>

@@ -11,7 +11,7 @@ const {posts} = Astro.props;
                 <li class="flex flex-col gap-1">
                     <a href={'/posts/'+post.slug} class="flex flex-col gap-1">
                         <div class="flex flex-row gap-3 items-center">
-                            <div class="max-w-32">
+                            <div class="max-w-32 aspect-video overflow-hidden flex flex-row items-center justify-center">
                                 <img src={post.data.image.url} alt={post.data.image.alt} class="bg-cover bg-center" />
                             </div>
                             <div class="flex-grow">
