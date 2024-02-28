@@ -11,8 +11,19 @@ const {title} = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Blog centrado en poner en conocimiento del lector todo lo relacionado con ser autosuficiente y sostenible." />
 		<link rel="stylesheet" href="/styles/global.css" />
 		<ViewTransitions />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-P99EQKCFY9"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-P99EQKCFY9');
+		</script>
 	</head>
 	<body class="min-h-dvh w-full max-w-3xl mx-auto text-gray-600">
 		<slot />
