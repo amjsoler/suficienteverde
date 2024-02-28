@@ -1,0 +1,30 @@
+---
+import {getCollection} from "astro:content";
+import PostHead from "./PostHead.astro";
+
+const {posts} = Astro.props;
+---
+
+<div>
+    <ul class="space-y-6">
+        {posts.map((post) => (
+                <li class="flex flex-col gap-1">
+                    <a href={'/posts/'+post.slug} class="flex flex-col gap-1">
+                        <div class="flex flex-row gap-3 items-center">
+                            <div class="max-w-32">
+                                <img src={post.data.image.url} alt={post.data.image.alt} class="bg-cover bg-center" />
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-lg sm:text-xl md:text-2xl text-primary">{post.data.title}</h3>
+                            </div>
+                        </div>
+
+                        <p class="flex justify-end">
+                            <PostHead class="justify-end" autor={post.data.author} pubDate={post.data.pubDate} readTime={post.data.readTime} />
+                        </p>
+                        <p class="w-1/2 mx-auto border-b-2 mt-2"/>
+                    </a>
+                </li>
+        ))}
+    </ul>
+</div>

@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import PageLayout from "../../layouts/PageLayout.astro";
+import PostList from "../../components/posts/PostList.astro";
 
 const allPosts = await getCollection("posts");
 
@@ -11,7 +13,7 @@ export async function getStaticPaths() {
     const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
     return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
+    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag)).sort((a, b) => b.data.pubDate - a.data.pubDate);
     return {
       params: { tag },
       props: { posts: filteredPosts },
@@ -19,9 +21,13 @@ export async function getStaticPaths() {
   });
 }
 
-const {posts } = Astro.props;
+const { posts } = Astro.props;
 ---
-<ul>
-    {posts.map((post) => <li>HOli!
-        {post.data.title}</li>)}
-</ul>
+<PageLayout title={'Posts del tag ' + tag}>
+    <section class="py-2 px-4 space-y-6">
+        <h2 class="text-center text-2xl text-primary">
+            {'Posts del tag "' + tag + '"'}
+        </h2>
+        <PostList posts={posts} />
+    </section>
+</PageLayout>
