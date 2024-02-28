@@ -5,7 +5,6 @@ import PostList from "../../components/posts/PostList.astro";
 
 const allPosts = await getCollection("posts");
 
-    console.log(allPosts)
     const { tag } = Astro.params;
 
 export async function getStaticPaths() {

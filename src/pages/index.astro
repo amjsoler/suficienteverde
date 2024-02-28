@@ -9,7 +9,7 @@ const allPosts = await getCollection('posts');
 const latestPosts = allPosts.sort((a, b) => b.data.pubDate - a.data.pubDate).slice(0, 5);
 ---
 
-<PageLayout title={title}>
+<PageLayout title="Inicio">
     <div class="py-8 px-4">
         <section class="space-y-8">
             <header class="w-full space-y-2">
