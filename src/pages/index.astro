@@ -19,8 +19,6 @@ const latestPosts = allPosts.sort((a, b) => b.data.pubDate - a.data.pubDate).sli
             </header>
     
             <main class="flex flex-col items-center space-y-6">
-                <input type="text" class="h-8 w-full max-w-xs rounded-full border-2 px-2" placeholder="¿Sobre qué sientes curiosidad hoy?" />
-
                 <!-- Últimos 3 posts -->
                 <PostList posts={latestPosts} />
             </main>
